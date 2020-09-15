@@ -1,3 +1,4 @@
+//formas diferentes de chamar a função
 function getPreco(imposto = 0, moeda= 'R$'){
 
     return `${moeda} ${this.preco * (1 -  this.desc) * (1 + imposto)}`
@@ -13,9 +14,10 @@ global.preco= 20
 global.desc= 0.1
 console.log(getPreco()) // o this ta associando ao valor global
 
-console.log(produto.getPreco())
+console.log(produto.getPreco()) //forma direta
 const carro = { preco: 49990, desc: 0.20}
 
+//utilizando o Apply ou Call
 console.log(getPreco.call(carro))
 console.log(getPreco.apply(carro))
 

@@ -4,7 +4,8 @@ this.a= 1
 exports.b= 2
 module.exports.c= 3
 
-exports = nullconsole.log(module.exports)
+exports = null
+console.log(module.exports)
 
 exports = { // nnão muda o valor que vai exportar
     nome: 'Teste'

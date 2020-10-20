@@ -15,7 +15,7 @@ const getTurma = letra => {
             try{
                 resolve(JSON.parse(resultado))
             } catch(e){
-                reject
+                reject(e)
             }
         })
     })
